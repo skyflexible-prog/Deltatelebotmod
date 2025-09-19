@@ -3,7 +3,7 @@ services:
     name: delta-strangle-bot
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn --config gunicorn.conf.py app:app
+    startCommand: python waitress_server.py
     envVars:
       - key: DELTA_API_KEY
         sync: false
